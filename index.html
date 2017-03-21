@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <ul id="app">
+      <li v-for="value in object">
+        {{ value }}
+      </li>
+    </ul>
+    
+    <br>
+    <!-- with key arg -->
+    <ul id="app2">
+      <li v-for="(value, key) in object">
+        {{ key }} {{ value }} <br>
+        <!-- {{ key }} -->
+      </li>
+    </ul>
+    <!-- with key arg + index -->
+    <ul id="app3">
+      <li v-for="(value, key, index) in object">
+        {{ index }} {{ key }} {{ value }} <br>
+      </li>
+    </ul>
+    <br>
+    
+    
+    <ul id="app4">
+      <li v-for="(value, key) in object">
+        {{ key }} {{ value }} <br>
+        <!-- {{ key }} -->
+      </li>
+      <br>
+      
+      <li v-for="(value, key) in object.set2">
+        {{ key }} {{ value }} <br>
+      </li>
+      <br>
+      
+      
+      <li v-for="(value, key) in object.set2.Likes">
+        {{ value }} <br>
+      </li>
+      <br>
+    </ul>
+    
+    
+    <script src="src/js/vendor/vue.min.js"></script>
+    <script src="src/vue-trigger.js"></script>
+  </body>
+</html>
